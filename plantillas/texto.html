@@ -1,0 +1,46 @@
+<html>
+    <body>
+    {#con el include podes poner un teplate dentro de otros#}
+    {%include "superior/barra_navegacion.html"%}
+
+    <h2 style="color:red">
+    casca y guts los amo
+    </h2>
+
+    {# carreo a busso y tabin #}
+    {% comment 'puto' %}
+        jajaja aprendi a comentar cosas
+    {% endcomment %}
+
+    {% if nombre_persona == "Eren"%}
+
+        <p>Eren puto amo</p>
+
+    {%else%}
+    
+        <p>Levi puto amo</p>
+
+    {% endif %}
+
+    <p>
+    {#Con un pipe se puede agregar filtros, por alguna razon no me escribe el pipe, se pueden encadenar#}
+    El mas fachero es : {{nombre_persona.upper}}, mi edad es de {{edad_persona}}
+    La fecha de hoy es {{fecha.day}} / {{fecha.month}} / {{fecha.year}}
+    </p>
+    <p>
+        <ul>
+        {% if temas %}
+            {% for tema in temas %}
+
+                <li>{{tema}}</li>
+                
+            {% endfor %}
+        {% else %}
+
+            <p>Te quedaste sin temas kpo</p>
+
+        {% endif %}
+        </ul>
+    </p>
+    </body>
+    </html>

@@ -1,0 +1,19 @@
+{% extends 'base.html' %}
+
+{% comment 'aclaraciones' %}
+        Este es el template que hereda de "base"
+{% endcomment %}
+
+{% block title %}
+    hija
+{% endblock %}
+
+{% block content %}
+
+<p> hoy es: {{fechita}} </p>
+
+{# aca inserte un videazo #}
+
+<iframe width="560" height="315" src="https://www.youtube.com/embed/j7ImxMo57U8" frameborder="0" allow="accelerometer; autoplay; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
+
+{% endblock content %}
